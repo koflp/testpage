@@ -10,22 +10,17 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
       font-family: Arial, sans-serif;
     }
-    header {
-      background-color: #003399;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
+
+    #bp-web-widget-container {
+      height: 100vh;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Willkommen beim Rechtsassistenten</h1>
-    <p>Ich helfe Ihnen, Ihr Anliegen Schritt für Schritt zu erfassen.</p>
-  </header>
+
+  <div id="bp-web-widget-container"></div>
 
   <script>
     window.botpressWebChat.init({
