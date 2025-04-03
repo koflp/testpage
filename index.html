@@ -1,24 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <title>Rechtsassistent</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
+  <script type="module">
+    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
+    Typebot.initStandard({ typebot: "quiz-qb7ttgz" });
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #003399;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    #chat-wrapper {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    typebot-standard {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Willkommen beim Rechtsassistenten</h1>
     <p>Bitte beantworten Sie die Fragen Schritt für Schritt.</p>
   </header>
-  <script type="module">
-    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
-  
-    Typebot.initStandard({ typebot: "quiz-qb7ttgz" });
-  </script>
-  
-  <typebot-standard style="width: 100%; height: 600px; "></typebot-standard>
 
+  <div id="chat-wrapper">
+    <typebot-standard></typebot-standard>
+  </div>
+
+  <footer>
+    Dies ist keine verbindliche Rechtsberatung. Ihre Daten werden vertraulich behandelt.
+  </footer>
 </body>
 </html>
