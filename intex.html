@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Rechtsassistent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #003399;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Willkommen beim Rechtsassistenten</h1>
+    <p>Ich helfe Ihnen, Ihr Anliegen Schritt für Schritt zu erfassen.</p>
+  </header>
+
+  <script>
+    window.botpressWebChat.init({
+      botId: "a9aedd31-c2f2-4c94-aca3-8ffa88971e44",
+      hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+      messagingUrl: "https://messaging.botpress.cloud",
+      botName: "Rechtsassistent",
+      layout: "full-page",
+      hideWidget: true,
+      showChatButton: false
+    });
+  </script>
+</body>
+</html>
