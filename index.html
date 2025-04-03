@@ -6,29 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
+      background: #f4f4f4;
     }
 
-    #bp-web-widget-container {
-      height: 100vh;
+    header {
+      background-color: #003399;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    #chatbot-container {
+      margin: 2rem auto;
+      max-width: 600px;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Willkommen beim Rechtsassistenten</h1>
+    <p>Bitte beantworten Sie die Fragen Schritt für Schritt.</p>
+  </header>
 
-  <div id="bp-web-widget-container"></div>
+  <div id="chatbot-container"></div>
 
   <script>
     window.botpressWebChat.init({
       botId: "a9aedd31-c2f2-4c94-aca3-8ffa88971e44",
       hostUrl: "https://cdn.botpress.cloud/webchat/v1",
       messagingUrl: "https://messaging.botpress.cloud",
-      botName: "Rechtsassistent",
-      layout: "full-page",
+      containerWidth: "100%",
+      layoutWidth: "100%",
+      container: "#chatbot-container",
       hideWidget: true,
       showChatButton: false
     });
