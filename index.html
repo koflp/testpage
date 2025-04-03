@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Rechtsassistent</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
     }
 
     header {
-      background-color: #003399;
+      background: #003399;
       color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 1.5rem;
     }
 
-    #chatbot-container {
-      margin: 2rem auto;
+    #bot-container {
       max-width: 600px;
       height: 600px;
+      margin: 2rem auto;
       border: 1px solid #ccc;
-      border-radius: 12px;
+      border-radius: 8px;
+      background: white;
       overflow: hidden;
     }
   </style>
@@ -35,18 +37,21 @@
     <p>Bitte beantworten Sie die Fragen Schritt für Schritt.</p>
   </header>
 
-  <div id="chatbot-container"></div>
+  <div id="bot-container"></div>
 
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
   <script>
-    window.botpressWebChat.init({
-      botId: "a9aedd31-c2f2-4c94-aca3-8ffa88971e44",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-      messagingUrl: "https://messaging.botpress.cloud",
-      containerWidth: "100%",
-      layoutWidth: "100%",
-      container: "#chatbot-container",
-      hideWidget: true,
-      showChatButton: false
+    window.addEventListener("load", function () {
+      window.botpressWebChat.init({
+        botId: "a9aedd31-c2f2-4c94-aca3-8ffa88971e44",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        container: "#bot-container",
+        showChatButton: false,
+        hideWidget: true,
+        layoutWidth: "100%",
+        containerWidth: "100%"
+      });
     });
   </script>
 </body>
